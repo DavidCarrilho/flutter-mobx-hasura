@@ -25,13 +25,13 @@ class _HomePageState extends State<HomePage> {
       body: Observer(
         builder: (BuildContext context) {
           return ListView.builder(
-            itemCount: homeController.lsitaProdutos.length,
+            itemCount: homeController.listaProdutos.length,
             itemBuilder: (BuildContext context, int index) {
               return CardProdutoWidget(
-                nomeProduto: "Produto $index",
-                valor: "${10 * index}",
-                categoriaProduto: "Categoria $index",
-                tipoProduto: "Tipo $index",
+                nomeProduto: homeController.listaProdutos[index].nome,
+                valor: homeController.listaProdutos[index].valor.toString(),
+                categoriaProduto: homeController.listaProdutos[index].categoriaProduto.descricao,
+                tipoProduto: homeController.listaProdutos[index].tipoProduto.descricao
               );
             },
           );

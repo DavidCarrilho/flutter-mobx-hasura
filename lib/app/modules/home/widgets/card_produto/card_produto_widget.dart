@@ -30,7 +30,7 @@ class CardProdutoWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 90,
+            top: 80,
             right: 30,
             child: CircleAvatar(
               radius: 130,
@@ -38,7 +38,7 @@ class CardProdutoWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 130,
+            top: 120,
             right: 120,
             child: CircleAvatar(
               radius: 130,
