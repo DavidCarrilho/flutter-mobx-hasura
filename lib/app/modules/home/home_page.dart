@@ -28,17 +28,20 @@ class _HomePageState extends State<HomePage> {
             itemCount: homeController.listaProdutos.length,
             itemBuilder: (BuildContext context, int index) {
               return CardProdutoWidget(
-                nomeProduto: homeController.listaProdutos[index].nome,
-                valor: homeController.listaProdutos[index].valor.toString(),
-                categoriaProduto: homeController.listaProdutos[index].categoriaProduto.descricao,
-                tipoProduto: homeController.listaProdutos[index].tipoProduto.descricao
-              );
+                  nomeProduto: homeController.listaProdutos[index].nome,
+                  valor: homeController.listaProdutos[index].valor.toString(),
+                  categoriaProduto: homeController
+                      .listaProdutos[index].categoriaProduto.descricao,
+                  tipoProduto: homeController
+                      .listaProdutos[index].tipoProduto.descricao);
             },
           );
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/AddProduto");
+        },
         child: Icon(
           Icons.add,
           color: Colors.white,

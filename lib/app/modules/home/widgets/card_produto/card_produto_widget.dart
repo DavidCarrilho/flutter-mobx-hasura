@@ -73,7 +73,7 @@ class CardProdutoWidget extends StatelessWidget {
                               fontSize: 18,
                             )),
                       ),
-                      Text("R\$ ${valor}",
+                      Text("R\$ ${double.parse(valor).toStringAsFixed(2).replaceAll('.', ',')}",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 30,
