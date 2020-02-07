@@ -1,3 +1,4 @@
+import 'package:app_hasura/app/shared/custon_combobox/custon_combobox_widget.dart';
 import 'package:app_hasura/app/shared/widgets/label/label_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,7 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
                         BorderSide(color: Theme.of(context).primaryColor)),
               ),
             ),
-            SizedBox(heigh: 20),
+            SizedBox(height: 20),
             LabelWidget(
               title: "Valor:",
             ),
@@ -61,6 +62,18 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
             LabelWidget(
               title: "Categoria de Produto:",
             ),
+            CustonComboboxWidget(
+                //   items: [
+                //     Model("01", "Brasil"),
+                //     Model("02", "Belgica"),
+                //     Model("03", "Belise"),
+                //     Model("04", "Bunridi"),
+                //   ],
+                //   onChange: (item) {
+                //     print(item.descricao);
+                //   },
+                //   itemSelecionado: Model("01", "Brasil"),
+                ),
             LabelWidget(
               title: "Tipo de Produto:",
             )
