@@ -9,8 +9,8 @@ class ProdutoModel {
   final String id;
   final String nome;
   final int valor;
-  final AtributoGenerico tipoProduto;
-  final AtributoGenerico categoriaProduto;
+  final TipoOUCategoriaDto tipoProduto;
+  final TipoOUCategoriaDto categoriaProduto;
 
   ProdutoModel({
     @required this.id,
@@ -24,8 +24,8 @@ class ProdutoModel {
     String id,
     String nome,
     int valor,
-    AtributoGenerico tipoProduto,
-    AtributoGenerico categoriaProduto,
+    TipoOUCategoriaDto tipoProduto,
+    TipoOUCategoriaDto categoriaProduto,
   }) =>
       ProdutoModel(
         id: id ?? this.id,
@@ -46,10 +46,10 @@ class ProdutoModel {
         valor: json["valor"] == null ? null : json["valor"],
         categoriaProduto: json["categoria_produto"] == null
             ? null
-            : AtributoGenerico.fromMap(json["categoria_produto"]),
+            : TipoOUCategoriaDto.fromMap(json["categoria_produto"]),
         tipoProduto: json["tipo_produto"] == null
             ? null
-            : AtributoGenerico.fromMap(json["tipo_produto"]),
+            : TipoOUCategoriaDto.fromMap(json["tipo_produto"]),
       );
 
   Map<String, dynamic> toMap() => {
@@ -72,27 +72,27 @@ class ProdutoModel {
   }
 }
 
-class AtributoGenerico {
+class TipoOUCategoriaDto {
   final String descricao;
 
-  AtributoGenerico({
+  TipoOUCategoriaDto({
     @required this.descricao,
   });
 
-  AtributoGenerico copyWith({
+  TipoOUCategoriaDto copyWith({
     String descricao,
   }) =>
-      AtributoGenerico(
+      TipoOUCategoriaDto(
         descricao: descricao ?? this.descricao,
       );
 
-  factory AtributoGenerico.fromJson(String str) =>
-      AtributoGenerico.fromMap(json.decode(str));
+  factory TipoOUCategoriaDto.fromJson(String str) =>
+      TipoOUCategoriaDto.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory AtributoGenerico.fromMap(Map<String, dynamic> json) =>
-      AtributoGenerico(
+  factory TipoOUCategoriaDto.fromMap(Map<String, dynamic> json) =>
+      TipoOUCategoriaDto(
         descricao: json["descricao"] == null ? null : json["descricao"],
       );
 
