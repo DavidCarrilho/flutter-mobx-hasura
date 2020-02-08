@@ -165,9 +165,11 @@ packages:
   find_dropdown:
     dependency: "direct main"
     description:
-      name: find_dropdown
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: eb92103d0f0154ac5f0e4e03f7459e0795ff74a4
+      url: "https://github.com/Bwolfs2/find_dropdown.git"
+    source: git
     version: "0.1.7+1"
   fixnum:
     dependency: transitive
@@ -432,9 +434,11 @@ packages:
   select_dialog:
     dependency: transitive
     description:
-      name: select_dialog
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "380ecf530ab553342c81818e2ea51339e4d3509e"
+      url: "https://github.com/davidsdearaujo/select_dialog.git"
+    source: git
     version: "1.0.6+1"
   shared_preferences:
     dependency: "direct main"

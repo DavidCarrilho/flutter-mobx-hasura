@@ -17,7 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  find_dropdown: ^0.1.7+1
+  find_dropdown: 
+    git: https://github.com/Bwolfs2/find_dropdown.git
   hasura_connect: ^1.0.5
   shared_preferences: ^0.5.6+1
   dio: ^3.0.8

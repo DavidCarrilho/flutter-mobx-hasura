@@ -5,8 +5,8 @@ import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:app_hasura/app/shared/custon_combobox/custon_combobox_widget.dart';
 
 main() {
-  testWidgets('CustonComboboxWidget has message', (WidgetTester tester) async {
-    await tester.pumpWidget(buildTestableWidget(CustonComboboxWidget()));
+  testWidgets('CustomComboboxWidget has message', (WidgetTester tester) async {
+    await tester.pumpWidget(buildTestableWidget(CustomComboboxWidget()));
     final textFinder = find.text('CustonCombobox');
     expect(textFinder, findsOneWidget);
   });
